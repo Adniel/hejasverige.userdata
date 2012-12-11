@@ -122,15 +122,15 @@ plone.app.controlpanel_ documentation for a detailed explanation.
 To override plone.app.users' default adapter, we put this in `overrides.zcml`::
     
   <adapter 
-    provides=".userdataschema.IEnhancedUserDataSchema"
+    provides=".userdataschema.IHejaSverigeUserDataSchema"
     for="Products.CMFCore.interfaces.ISiteRoot"
-    factory=".adapter.EnhancedUserDataPanelAdapter"
+    factory=".adapter.HejaSverigeUserDataPanelAdapter"
     />
 
 In `adapter.py`, we repeat (yes, this is unfortunate) the fields we defined in
 the schema. For example, for the `firstname` field, we do this::
 
-    class EnhancedUserDataPanelAdapter(UserDataPanelAdapter):
+    class HejaSverigeUserDataPanelAdapter(UserDataPanelAdapter):
         """
         """
         def get_firstname(self):

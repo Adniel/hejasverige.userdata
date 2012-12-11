@@ -24,7 +24,7 @@ class UserDataSchemaProvider(object):
         """
         return IEnhancedUserDataSchema
 
-class IEnhancedUserDataSchema(IUserDataSchema):
+class IHejaSverigeUserDataSchema(IUserDataSchema):
     """ Use all the fields from the default user data schema, and add various
     extra fields.
     """
